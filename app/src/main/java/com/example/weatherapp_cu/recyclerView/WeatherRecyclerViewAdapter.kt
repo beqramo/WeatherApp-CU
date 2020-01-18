@@ -22,22 +22,22 @@ class WeatherRecyclerViewAdapter(val weatherHours : List<WeatherModel>) : Recycl
         )
     }
 
-    override fun getItemCount() = weatherHours.size
+    override fun getItemCount() = 5
 
     override fun onBindViewHolder(holder: WeatherViewHolder, position: Int) {
         val weatherHour = weatherHours[position]
 
-        holder.view.termperature.text = weatherHour.main.temp.toString()
+        holder.view.termperature.text = weatherHour.main.temp.toString() + " °c"
 
-        val sdf = SimpleDateFormat("MM/dd/yyyy")
+        val sdf = SimpleDateFormat("hh:mm a")
 
-        val netDate = Date( weatherHour.dt.toLong())
+        val netDate = Date( weatherHour.dt.toLong()* 1000)
 
         holder.view.hour.text = sdf.format(netDate)
 
-//        Glide.with(holder.view.context)
-//            .load("http://openweathermap.org/img/wn/${weatherHour.weather[0].icon}")
-//            .into(holder.view.imageView3)
+        Glide.with(holder.view.context)
+            .load("https://openweathermap.org/img/wn/${weatherHour.weather[0].icon}.png")
+            .into(holder.view.imageView3)
     }
 
 
