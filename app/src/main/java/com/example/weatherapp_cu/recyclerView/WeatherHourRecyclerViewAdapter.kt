@@ -12,7 +12,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 
-class WeatherRecyclerViewAdapter(val weatherHours : List<WeatherModel>) : RecyclerView.Adapter<WeatherRecyclerViewAdapter.WeatherViewHolder>() {
+class WeatherHourRecyclerViewAdapter(val weatherHours : List<WeatherModel>) : RecyclerView.Adapter<WeatherHourRecyclerViewAdapter.WeatherViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WeatherViewHolder {
 

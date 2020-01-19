@@ -46,4 +46,8 @@ dependencies {
     //noinspection GradleCompatible
     implementation 'com.android.support:design:28.0.0'
 
+    def klockVersion = "1.7.3"
+
+    implementation "com.soywiz.korlibs.klock:klock:$klockVersion" // Common
+
 }
