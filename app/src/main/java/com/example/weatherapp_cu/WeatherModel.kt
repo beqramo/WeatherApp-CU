@@ -4,7 +4,9 @@ data class WeatherModel (
     val dt: Int,
     val main: WeatherMain,
     val weather : List<Weather>,
-    val city : City
+    val city : City,
+    val dt_txt : String
+
 )
 
 
